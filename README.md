@@ -1,3 +1,5 @@
+![alt text](https://github.com/Roadeo/qbittorrent-peers-location-grafana/blob/main/worldmap.PNG)
+
 A python script (along with instructions) to display the locations of all the peers your qBittorrent client is connected to in a Grafana worldmap dashboard.
 
 Disclaimer : The steps I took to get this working might not be the most efficient. But this is all I could create with what I know at the moment. Feel free to (actually this is a request) to make changes and improve this. Thanks!
@@ -31,6 +33,12 @@ Now download the python script in this repository and fill in your credentials.
 Once you're done with this step, run the script once. If all goes well, you should be able to see the peer_list table populated with IP addresses and geohashes.
 
 If you haven't already done so, install the Grafana world map plugin. You can find it here "https://grafana.com/grafana/plugins/grafana-worldmap-panel/".
+
+![alt text](https://github.com/Roadeo/qbittorrent-peers-location-grafana/blob/main/query.PNG)
+
+![alt text](https://github.com/Roadeo/qbittorrent-peers-location-grafana/blob/main/worldmap_settings_1.PNG)
+
+![alt text](https://github.com/Roadeo/qbittorrent-peers-location-grafana/blob/main/worldmap_settings_2.PNG)
 
 Once that's done, create a new panel in Grafana and change visualization option to worldmap panel. Change the database source to your MariaDB database. Choose the table name as peer_list, and the metric column as geohash. In the next row, change the Column:value to Column:geohash by right clicking it and typing in geohash. Then, at the end of the query options, change the format as option to table. Then we'll change the worldmap panel options in the right side. Change the values for min and max circle size to 1 since we're displaying each peer as a single dot and not as a bigger circle. Change location data to geohash. Finally, under field mapping, enter geohash in the geo_point/geohash field box.
 
