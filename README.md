@@ -20,6 +20,10 @@ Steps:
 
 First step is to create the database which will contain the information about the IP addresses and their corresponding locations. I used this "https://lite.ip2location.com/database/ip-country-region-city-latitude-longitude" since it is free and it had the latitude and longitude information which is enough precision to pipoint a peer on the map. Download the IPV4 CSV file from this link and follow the instructions given below in the same page to create a database and import the location data to a table.
 
+![alt text](https://github.com/Roadeo/qbittorrent-peers-location-grafana/blob/main/ip2locationdb.PNG)
+
+![alt text](https://github.com/Roadeo/qbittorrent-peers-location-grafana/blob/main/peer_list.PNG)
+
 Next, create a new table which I'll call peer_list to store the IP addresses along with their geohashes of all the peers which are connected at a given point in time. To create this table, which is in the same database as the ip2location table, I used:
 
 CREATE TABLE peer_list (time int(11), ip_address varchar(15), geohash varchar(20));
