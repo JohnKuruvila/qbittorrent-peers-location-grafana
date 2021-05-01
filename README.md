@@ -1,22 +1,22 @@
 ![alt text](https://github.com/Roadeo/qbittorrent-peers-location-grafana/blob/main/worldmap.PNG)
 
-A python script (along with instructions) to display the locations of all the peers your qBittorrent client is connected to in a Grafana worldmap dashboard.
+<h2>A python script (along with instructions) to display the locations of all the peers your qBittorrent client is connected to in a Grafana worldmap dashboard.</h2>
 
 Disclaimer : The steps I took to get this working might not be the most efficient. But this is all I could create with what I know at the moment. Feel free to (actually this is a request) to make changes and improve this. Thanks!
 
-Pre-requisites:
+<h3>Pre-requisites</h3>
 
-python
-	pygeohash module (to convert latitude and longitude to geohash)
-	mariadb module (a quick google search for 'python mariadb' should tell you all you need to know about using this module)
+*python
+	*pygeohash module (to convert latitude and longitude to geohash)
+	*mariadb module (a quick google search for 'python mariadb' should tell you all you need to know about using this module)
 
-MariaDB (this should work with other similar databases but I haven't tried any of them yet)
+*MariaDB (this should work with other similar databases but I haven't tried any of them yet)
 
-qBittorrent
+*qBittorrent
 
-Grafana
+*Grafana
 
-Steps:
+<h3>Steps</h3>
 
 First step is to create the database which will contain the information about the IP addresses and their corresponding locations. I used this "https://lite.ip2location.com/database/ip-country-region-city-latitude-longitude" since it is free and it had the latitude and longitude information which is enough precision to pipoint a peer on the map. Download the IPV4 CSV file from this link and follow the instructions given below in the same page to create a database and import the location data to a table.
 
