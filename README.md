@@ -18,7 +18,7 @@ Disclaimer : The steps I took to get this working might not be the most efficien
 
 <h3>Steps</h3>
 
-* First step is to create the database which will contain the information about the IP addresses and their corresponding locations. I used this "https://lite.ip2location.com/database/ip-country-region-city-latitude-longitude" since it is free and it had the latitude and longitude information which is enough precision to pipoint a peer on the map. Download the IPV4 CSV file from this link and follow the instructions given below in the same page to create a database and import the location data to a table.
+* First step is to create the database which will contain the information about the IP addresses and their corresponding locations. I used this "https://lite.ip2location.com/database/db5-ip-country-region-city-latitude-longitude" since it is free and it had the latitude and longitude information which is enough precision to pipoint a peer on the map. Download the IPV4 CSV file from this link and follow the instructions given below in the same page to create a database and import the location data to a table.
 
 ![alt text](https://github.com/Roadeo/qbittorrent-peers-location-grafana/blob/main/ip2locationdb.PNG)
 
