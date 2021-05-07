@@ -51,7 +51,7 @@ for torrent in torrents:
         longitude = results[1]
 
         if latitude == 0 and longitude == 0:
-            pass #Sometimes (especially in public trackers) some IP's in the private IP space show up as peers. This should filter those.
+            continue #Sometimes (especially in public trackers) some IP's in the private IP space show up as peers. This should filter those.
 
         geohash = pygeohash.encode(latitude, longitude)
 
