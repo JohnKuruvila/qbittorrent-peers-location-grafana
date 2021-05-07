@@ -50,6 +50,9 @@ for torrent in torrents:
         latitude = results[0]
         longitude = results[1]
 
+        if latitude == 0 and longitude == 0:
+            pass #Sometimes (especially in public trackers) some IP's in the private IP space show up as peers. This should filter those.
+
         geohash = pygeohash.encode(latitude, longitude)
 
         query = "INSERT INTO ip2location.peer_list(time, ip_address, geohash) VALUES (" + current_time + ",'" + str(ip) + "','" + geohash + "');"
