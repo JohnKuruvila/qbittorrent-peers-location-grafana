@@ -2,6 +2,10 @@
 
 <h2>A python script (along with instructions) to display the locations of all the peers your qBittorrent client is connected to in a Grafana worldmap dashboard.</h2>
 
+### **For a better implementation of this script check out this fork by @kaizensh: https://github.com/kaizensh/qbit-peers**
+
+<hr>
+
 Disclaimer : The steps I took to get this working might not be the most efficient. But this is all I could create with what I know at the moment. Feel free to (actually this is a request) to make changes and improve this. Thanks!
 
 <h3>Pre-requisites</h3>
